@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head> 
+<title>Tipsy Tooltip Plugin</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Частная коллекция готовых дизайнерских решений, для вашего сайта, чата и cистемы uCoz."/>
+<meta name="keywords" content="DM:  Tipsy Tooltip Plugin" />
+
+<style>
+/* ОСНОВА 
+===========================================================================================*/
+body  {margin: 0 auto; padding: 0;  width: 100%; height: 100%; background: #F4F5F6;}
+body,
+td     {font:11px Verdana,Arial,Helvetica, sans-serif; color:#555;}
+img    {border: none;}
+
+        a {text-decoration:none;outline:none}
+a:link    {text-decoration:none; color:#2C68A6;}
+a:visited {text-decoration:none; color:#2C68A6;}
+a:hover   {text-decoration:none; color:#60a62c;}
+
+#container       {margin: 0px auto; width:500px; height:100%; }
+#container_os    {margin: 100px 0px 50px 0px;}
+#container_os h2 {font: 145%/1.5 Verdana,Arial,Helvetica, sans-serif; color:#008000; font-weight: bold; border-bottom: 1px solid #D6D6D6;}
+.otstup          {margin: 20px 0px 20px 0px;}
+
+#gravity  { 
+ width: 100%;
+ margin: 5px 0;
+ border-spacing: 5px;
+}
+
+#gravity td {
+ text-align: center;
+ vertical-align: middle;
+ padding: 5px 0;
+ background-color: #F8FCFF; 
+ border-top: 1px solid #D0D0D0;
+ border-right: 1px solid #fff;
+ border-left: 1px solid #D0D0D0;
+ border-bottom: 1px solid #fff;
+}
+.tipsy {
+ padding: 5px;
+ font-size: 11px;
+ opacity: 0.8;
+ filter: alpha(opacity=80);
+ background-repeat: no-repeat;
+ background-image: url('tipsy.gif');
+}
+
+.tipsy-inner {
+ padding: 5px 8px 4px 8px;
+ background-color: black;
+ color: white;
+ max-width: 200px;
+ text-align: center;
+}
+
+.tipsy-inner {
+ -moz-border-radius:3px;
+ -webkit-border-radius:3px;
+}
+
+.tipsy-north {
+ background-position: top center;
+}
+
+.tipsy-south {
+ background-position: bottom center;
+}
+
+.tipsy-east  {
+ background-position: right center;
+}
+
+.tipsy-west  {
+background-position: left center;
+}
+
+/* ========================================================================================*/
+</style>
+<script type="text/javascript" src="http://s105.ucoz.net/src/u.js?2"></script>
+
+</head>
+<body>  
+<script type="text/javascript" src="jquery.tipsy.js"></script>
+<script type='text/javascript'>
+  $(function() {    
+    $('.north').tipsy({gravity: 'n'});
+    $('.south').tipsy({gravity: 's'});
+    $('.east').tipsy({gravity: 'e'});
+    $('.west').tipsy({gravity: 'w'});    
+  });
+</script>
+
+<!-- Начало тегов основной каркас --> 
+ <div id="container">
+  <div id="container_os">
+
+  <table id='gravity' cellspacing='5'>
+  <tr>
+    <td>
+      <a class='north' href='#' title='Подсказка  появляется снизу (Север)'>North | Север</a>
+    </td>
+    <td>
+      <a class='south' href='#' title='Подсказка  появляется сверху (Юг)'>South | Юг</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a class='east' href='#' title='Подсказка появляется слева (Восток)'>East | Восток</a>
+    </td>
+    <td>
+      <a class='west' href='#' title='Подсказка появляется справа (Запад)'>West |  Запад</a>
+    </td>
+  </tr>
+</table>   
+  
+  </div>
+ </div>
+<!-- /Конец тегов основной каркас -->
+
+</body>
+</html>
